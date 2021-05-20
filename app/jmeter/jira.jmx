@@ -9542,7 +9542,7 @@ if (response_data.name != vars.get(&quot;username&quot;)) {
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Check Issue Panel of Project DP" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Check Issue Panel of Project ABOCIA" enabled="true">
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                 <collectionProp name="Arguments.arguments"/>
               </elementProp>
@@ -9565,11 +9565,9 @@ if (response_data.name != vars.get(&quot;username&quot;)) {
               <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="Check Issue Panels" enabled="true">
                 <stringProp name="BeanShellAssertion.query">response = prev.getResponseDataAsString();
 
-boolean isProjectDP = response.contains(&quot;[\&quot;project-id\&quot;]=\&quot;10000\&quot;&quot;);
-log.info(&quot;isProjectDP - &quot; + isProjectDP.toString());
+boolean isProjectDP = response.contains(&quot;[\&quot;project-id\&quot;]=\&quot;10423\&quot;&quot;);
 
 if (isProjectDP){
-	log.info(&quot;Correct project&quot;);
 	boolean issuePanelExist = response.contains(&quot;class=\&quot;mod-content mgm-customizedPanel\&quot;&quot;);
 	if (issuePanelExist){
 	  prev.setSuccessful(true);	
@@ -9609,7 +9607,6 @@ if (isProjectDP){
                 <stringProp name="BeanShellAssertion.query">response = prev.getResponseDataAsString();
 
 boolean isIssueInEpic = response.contains(&quot;&lt;h4 class=\&quot;toggle-title\&quot;&gt;Issues in Epic&lt;/h4&gt;&quot;);
-log.info(&quot;isIssueInEpic - &quot; + isIssueInEpic.toString());
 
 if (isIssueInEpic){
 	boolean issuePanelExist = response.contains(&quot;id=\&quot;mgm-greenhopper-epics-issue-web-panel\&quot;&quot;);
@@ -9631,7 +9628,6 @@ if (isIssueInEpic){
                 <stringProp name="BeanShellAssertion.query">response = prev.getResponseDataAsString();
 
 boolean isSubtaskPanel = response.contains(&quot;&lt;h4 class=\&quot;toggle-title\&quot;&gt;Sub-Tasks&lt;/h4&gt;&quot;);
-log.info(&quot;isSubtaskPanel - &quot; + isSubtaskPanel.toString());
 
 if (isSubtaskPanel){
 	boolean issuePanelExist = response.contains(&quot;id=\&quot;mgmSubtaskPanel\&quot;&quot;);
@@ -9654,7 +9650,6 @@ if (isSubtaskPanel){
                 <stringProp name="BeanShellAssertion.query">response = prev.getResponseDataAsString();
 
 boolean isIssueLinksPanel = response.contains(&quot;&lt;h4 class=\&quot;toggle-title\&quot;&gt;Issue Links&lt;/h4&gt;&quot;);
-log.info(&quot;isIssueLinksPanel - &quot; + isIssueLinksPanel.toString());
 
 if (isIssueLinksPanel){
 	boolean issuePanelExist = response.contains(&quot;id=\&quot;mgm-issue-link-table\&quot;&quot;);
