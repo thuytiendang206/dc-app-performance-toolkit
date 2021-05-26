@@ -9603,13 +9603,13 @@ if (isProjectDP){
               <stringProp name="HTTPSampler.response_timeout">1000</stringProp>
             </HTTPSamplerProxy>
             <hashTree>
-              <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="Check Smart Issues In Epic Panels" enabled="false">
+              <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="Check Smart Issues In Epic Panels" enabled="true">
                 <stringProp name="BeanShellAssertion.query">response = prev.getResponseDataAsString();
 
 boolean isIssueInEpic = response.contains(&quot;&lt;h4 class=\&quot;toggle-title\&quot;&gt;Issues in Epic&lt;/h4&gt;&quot;);
 
 if (isIssueInEpic){
-	boolean issuePanelExist = response.contains(&quot;id=\&quot;mgm-greenhopper-epics-issue-web-panel\&quot;&quot;);
+	boolean issuePanelExist = response.contains(&quot;mgm-greenhopper-epics-issue-web-panel&quot;);
 	if (issuePanelExist){
 	  prev.setSuccessful(true);	
 	} else {
