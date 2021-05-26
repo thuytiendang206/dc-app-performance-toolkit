@@ -9635,7 +9635,6 @@ if (isSubtaskPanel){
 	  prev.setSuccessful(true);	
 	} else {
 	  prev.setSuccessful(false);	
-	  FailureMessage=&quot;Could not find smart sub-tasks panels&quot;;
 	  SampleResult.setResponseMessage(&quot;Could not find smart sub-tasks panels&quot;);	
 	}
 }
