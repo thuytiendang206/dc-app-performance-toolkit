@@ -5,7 +5,7 @@ settings:
   verbose: false
   check-updates: false    # disable bzt check for updates
   env:
-    application_hostname: a05940a04217841f4a201a98fb0509bb-1583422686.us-east-2.elb.amazonaws.com   # Jira DC hostname without protocol and port e.g. test-jira.atlassian.com or localhost
+    application_hostname: a8ce2d8cf48754ffa90f34eddc3a303d-745027904.us-east-2.elb.amazonaws.com    # Jira DC hostname without protocol and port e.g. test-jira.atlassian.com or localhost
     application_protocol: http      # http or https
     application_port: 443            # 80, 443, 8080, 2990, etc
     secure: True                    # Set False to allow insecure connections, e.g. when using self-signed SSL certificate
@@ -92,7 +92,7 @@ scenarios:
 modules:
   consolidator:
     rtimes-len: 0 # CONFSRVDEV-7631 reduce sampling
-    percentiles: [] # CONFSRVDEV-7631 disable all percentiles due to Taurus's excessive memory usage
+    percentiles: [ ] # CONFSRVDEV-7631 disable all percentiles due to Taurus's excessive memory usage
   jmeter:
     version: ${JMETER_VERSION}
     detect-plugins: true
@@ -120,5 +120,5 @@ modules:
     chromedriver:
       version: "114.0.5735.90" # Supports Chrome version 114. You can refer to http://chromedriver.chromium.org/downloads
 reporting:
-- data-source: sample-labels
-  module: junit-xml
+  - data-source: sample-labels
+    module: junit-xml
