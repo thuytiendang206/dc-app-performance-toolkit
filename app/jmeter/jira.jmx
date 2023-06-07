@@ -9542,7 +9542,7 @@ if (response_data.name != vars.get(&quot;username&quot;)) {
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Check Issue Panel of Project ABOCIA" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Check Issue Panel of Project AANES" enabled="true">
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                 <collectionProp name="Arguments.arguments"/>
               </elementProp>
@@ -9565,7 +9565,7 @@ if (response_data.name != vars.get(&quot;username&quot;)) {
               <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="Check Issue Panels" enabled="true">
                 <stringProp name="BeanShellAssertion.query">response = prev.getResponseDataAsString();
 
-boolean isProjectDP = response.contains(&quot;[\&quot;project-id\&quot;]=\&quot;10423\&quot;&quot;);
+boolean isProjectDP = response.contains(&quot;[\&quot;project-id\&quot;]=\&quot;10396\&quot;&quot;);
 
 if (isProjectDP){
 	boolean issuePanelExist = response.contains(&quot;class=\&quot;mod-content mgm-customizedPanel\&quot;&quot;);
