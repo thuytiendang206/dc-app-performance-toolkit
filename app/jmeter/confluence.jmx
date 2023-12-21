@@ -5925,7 +5925,7 @@ if (response_data.username != vars.get(&quot;username&quot;)) {
                 <stringProp name="HTTPSampler.port"></stringProp>
                 <stringProp name="HTTPSampler.protocol"></stringProp>
                 <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-                <stringProp name="HTTPSampler.path">${application.postfix}/rest/api/search?cql=user~Administrator</stringProp>
+                <stringProp name="HTTPSampler.path">${application.postfix}/rest/api/search?cql=user~Administrator&amp;start=0&amp;limit=100</stringProp>
                 <stringProp name="HTTPSampler.method">GET</stringProp>
                 <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
                 <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
