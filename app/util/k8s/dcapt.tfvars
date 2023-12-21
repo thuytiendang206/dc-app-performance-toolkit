@@ -10,12 +10,12 @@
 # Unique name of your enterprise-scale test cluster.
 # This value can not be altered after the configuration has been applied.
 # ! REQUIRED !
-environment_name = "dcapt-product"
+environment_name = "dcapt-confluence-large"
 
 # Supported products: jira, confluence, bitbucket and bamboo.
 # e.g.: products = ["confluence"]
 # ! REQUIRED !
-products = ["product-to-deploy"]
+products = ["confluence"]
 
 # Default AWS region for DCAPT snapshots.
 region = "us-east-2"
@@ -166,7 +166,7 @@ jira_db_master_password = "Password1!"
 # If storing license as plain-text is not a concern for this environment, feel free to uncomment the following line and supply the license here.
 # Please make sure valid Confluence license is used without spaces and new line symbols.
 # ! REQUIRED !
-confluence_license = "confluence-license"
+confluence_license = "AAABnw0ODAoPeNp1km9vmzAQxt/zKZD2ZtPkzDZtl0SytAxoi8qfraRLO+WNQ49ACg61DRnffk7dqNq0vbx77s6/e87vVvDoBlC4FLuUzr3pnGDXz5cmpp7jS+C63ouAa2DHDCIUUeIEoApZd0eJ+XtRNj2IAtz3po67PggN8sN67oYDb/qXAU7Ca5MV3JSFv7pajqeRZwgTRLET1wUI9R+xseIPkOr4JHXyfvNGoGUPTmEwJmnfbkBm5Z0ylQwR543AVmVyy0WtbKbdtq6GohL7Zr8d3Y5LLUyfHcULXQ9gu8yK2sShWaJhugYxeeRi+8X0I91Nin17ArzmqmKJf/Avw426WaV3A/4UXaurj2el0IeHZxFPn74vqtvnYbxctPec8mpX7RqSLMvVjv7cePiwZmtmCV4dWY4dpLwF5mdJEt760SK2eq4NMEhW8kbByb8oYHEU5GGKYjKbEezhcycHOYA0ytd7TNHsISMoSqcXKM7Or+yo493s2ezCTzCevCYXGH/GU88jzrdeFhVX8PdveLXnBfKf7hgc9ifSb7940LgwLAIUKKepGnJrDep6YT/mIzD1Gf6AZTgCFGE9+ImfnyPuVEH4cyBA378HLwqwX02k0"
 
 # Number of Confluence application nodes
 # Note: For initial installation this value needs to be set to 1 and it can be changed only after Confluence is fully
@@ -174,31 +174,31 @@ confluence_license = "confluence-license"
 confluence_replica_count = 1
 
 # Supported versions by DCAPT: https://github.com/atlassian/dc-app-performance-toolkit#supported-versions
-confluence_version_tag = "8.5.1"
+confluence_version_tag = "7.19.14"
 
 # Shared home restore configuration.
 # Make sure confluence version set in `confluence_version_tag` match the snapshot version.
 #
 # 8.5.1 DCAPT large dataset EBS snapshot
-confluence_shared_home_snapshot_id = "snap-074a2fdca0497b6b6"
+#confluence_shared_home_snapshot_id = "snap-074a2fdca0497b6b6"
 # 7.19.14 DCAPT large dataset EBS snapshot
-# confluence_shared_home_snapshot_id = "snap-00f5e8147604a017e"
+confluence_shared_home_snapshot_id = "snap-00f5e8147604a017e"
 
 # Database restore configuration.
 # Make sure confluence version set in `confluence_version_tag` match the snapshot version.
 # Build number stored within the snapshot and Confluence license are also required, so that Confluence can be fully setup prior to start.
 #
 # 8.5.1 DCAPT large dataset RDS snapshot
-confluence_db_snapshot_id = "arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-confluence-8-5-1"
+#confluence_db_snapshot_id = "arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-confluence-8-5-1"
 # 7.19.14 DCAPT large dataset RDS snapshot
-# confluence_db_snapshot_id = "arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-confluence-7-19-14"
+confluence_db_snapshot_id = "arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-confluence-7-19-14"
 
 # Build number for a specific Confluence version can be found in the link below:
 # https://developer.atlassian.com/server/confluence/confluence-build-information
 # 8.5.1
-confluence_db_snapshot_build_number = "9012"
+#confluence_db_snapshot_build_number = "9012"
 # 7.19.14
-# confluence_db_snapshot_build_number = "8804"
+confluence_db_snapshot_build_number = "8804"
 
 # Helm chart version of Confluence
 # confluence_helm_chart_version = "<helm_chart_version>"
