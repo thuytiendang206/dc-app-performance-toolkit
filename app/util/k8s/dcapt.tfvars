@@ -11,13 +11,13 @@
 # This value can not be altered after the configuration has been applied.
 # Only lowercase letters, numbers, dashes, and dots are allowed.
 # ! REQUIRED !
-environment_name = "dcapt-product"
+environment_name = "dcapt-confluence-cbpp"
 
 # Supported products: jira, confluence, bitbucket, crowd and bamboo.
 # For JSM set product as jira.
 # e.g.: products = ["jira"]
 # ! REQUIRED !
-products = ["product-to-deploy"]
+products = ["confluence"]
 
 # License
 # To avoid storing license in a plain text file, we recommend storing it in an environment variable prefixed with `TF_VAR_` (i.e. `TF_VAR_jira_license`) and keep the below line commented out
@@ -25,7 +25,7 @@ products = ["product-to-deploy"]
 # ! IMPORTANT ! Please make sure valid license is used without spaces and new line symbols.
 # ! REQUIRED !
 jira_license = "jira-license"
-confluence_license = "confluence-license"
+confluence_license = "AAABmQ0ODAoPeNp9kkFP4zAQhe/+FZG47B5c2QkNtJIlShKgKGnYJsBW6sWk08Y0cSPbKXR//bqYCu1KuwcfPO95/M2zz26U8GKoPBp4hI7JcEx8LypKzyf+OYoUcCN2MuYG2LGCqY9pgGLQlRLdUWLRTq6bHmQF3jfr414E0oD6vhx7yZ43/UcDlHFhq5JbW/LeCXU4tRxiQm1XlIoKpP6H2DjxCZQ+Xumjon/5IjCqB1RZjMGsb19A5etHbZ0MU/RF4Fy52nAptKu0m9Yd45URe3AOO46x+8QCN8wIkANTC7v6w2DF5ebKHsKmG1S79kR1x3XNsugtupk8vxZvxUqO1GqR3G33yX230M9lMN/xSf0j3lwUWbLY5mX9Kki5uh499g/d+f3812TJlsyhfMZQHjqY8RZYlGdZMo+mk9TpheHKpsvWvNFwCm0as3QaF8kMpz4Jw3AUDFEBag/KKtc/iY9Hi5zi6ewyxGk+vHWtjo/l3spNvoXDKWAaEnJBLoOAoodeVTXX8PcX+MzpA/L/MVku9ifbb/I/z6UwLAIURRfqHtOCcCQGXLsxOnJ1vEmEYXACFCTwFGHTKjW7G4wILq+ZP8jZ9XkiX02jn"
 bitbucket_license = "bitbucket-license"
 crowd_license = "crowd-license"
 bamboo_license = "bamboo-license"
